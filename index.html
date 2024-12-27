@@ -35,6 +35,9 @@
         #skills {
             background-color: #3f3f3f;
         }
+        #contact {
+            background-color: #4f4f4f;
+        }
         header {
             position: fixed;
             top: 0;
@@ -74,6 +77,22 @@
             color: #ff6f61;
             text-decoration: none;
         }
+        .skills {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            justify-items: center;
+        }
+        .skill img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .skill {
+            text-align: center;
+            color: #e0e0e0;
+        }
     </style>
 </head>
 <body>
@@ -84,9 +103,11 @@
             <a href="#home">Home</a>
             <a href="#about">About Me</a>
             <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
         </nav>
     </header>
 
+    <!-- Home Section -->
     <section id="home">
         <div>
             <h2>Welcome to My Portfolio</h2>
@@ -94,6 +115,7 @@
         </div>
     </section>
 
+    <!-- About Me Section -->
     <section id="about">
         <div>
             <h2>About Me</h2>
@@ -102,20 +124,58 @@
         </div>
     </section>
 
+    <!-- Skills Section -->
     <section id="skills">
         <div>
-            <h2>Skills & Technologies</h2>
-            <p>🚀 I am proficient in the following technologies:</p>
-            <ul>
-                <li>💻 Programming Languages: Python, JavaScript, C, HTML, CSS</li>
-                <li>🔐 Cybersecurity Tools: Kali Linux, Burp Suite, Metasploit</li>
-                <li>🎯 Certifications: CEH (Certified Ethical Hacker)</li>
-            </ul>
+            <h2>🚀 Skills & Technologies</h2>
+            <div class="skills">
+                <div class="skill">
+                    <img src="net+.jpg" alt="Network+">
+                    <span>Network+</span>
+                </div>
+                <div class="skill">
+                    <img src="owasp.png" alt="OWASP">
+                    <span>OWASP</span>
+                </div>
+                <div class="skill">
+                    <img src="linux.png" alt="LPIC-1">
+                    <span>LPIC-1</span>
+                </div>
+                <div class="skill">
+                    <img src="python.png" alt="Python">
+                    <span>Python</span>
+                </div>
+                <div class="skill">
+                    <img src="js.png" alt="JavaScript">
+                    <span>JavaScript</span>
+                </div>
+                <div class="skill">
+                    <img src="html.png" alt="HTML">
+                    <span>HTML</span>
+                </div>
+                <div class="skill">
+                    <img src="css.png" alt="CSS">
+                    <span>CSS</span>
+                </div>
+                <div class="skill">
+                    <img src="c.png" alt="C">
+                    <span>C</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div>
+            <h2>Contact Me</h2>
+            <p>📧 Feel free to reach out to me for any inquiries!</p>
+            <p>Email me at: <a href="mailto:sudojik@gmail.com">sudojik@gmail.com</a></p>
         </div>
     </section>
 
     <footer>
-        <p>📧 Contact me at <a href="mailto:sudojik@gmail.com">sudojik@gmail.com</a></p>
+        <p>Created by JIK | <a href="mailto:sudojik@gmail.com">Email me</a></p>
     </footer>
 
 </body>
