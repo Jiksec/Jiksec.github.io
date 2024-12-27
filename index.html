@@ -13,56 +13,62 @@
             background-color: #121212;
             color: #e0e0e0;
             line-height: 1.6;
+            overflow-x: hidden;
         }
         header {
             text-align: center;
-            padding: 2rem;
+            padding: 3rem;
             background: #1f1f1f;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
         header h1 {
-            font-size: 2.5rem;
+            font-size: 3rem;
             color: #ff6f61;
         }
-        section {
-            padding: 2rem;
-            margin: 1rem auto;
-            max-width: 800px;
-            background: #1f1f1f;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        header nav {
+            margin-top: 2rem;
         }
-        section h2 {
-            color: #ff6f61;
-            margin-bottom: 1rem;
-        }
-        .button-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 1rem;
-            margin-top: 1rem;
-        }
-        .button {
-            display: inline-block;
-            padding: 0.8rem 1.5rem;
-            background-color: #282828;
+        header nav a {
+            margin: 0 1rem;
             color: #e0e0e0;
             text-decoration: none;
-            border-radius: 8px;
-            text-align: center;
-            transition: background-color 0.3s, transform 0.3s;
+            font-weight: 700;
+            text-transform: uppercase;
+            transition: color 0.3s;
         }
-        .button:hover {
-            background-color: #383838;
-            transform: scale(1.1);
+        header nav a:hover {
+            color: #ff6f61;
+        }
+        .main-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #1f1f1f;
+        }
+        .page-content {
+            width: 90%;
+            max-width: 1200px;
+            padding: 2rem;
+            background: #282828;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        .page-content h2 {
+            color: #ff6f61;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .page-content p {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
         }
         .skills {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             gap: 1rem;
-            margin-top: 1rem;
+            margin-top: 2rem;
         }
         .skill {
             display: flex;
@@ -84,65 +90,131 @@
             transform: scale(1.1);
             background-color: #383838;
         }
+        .button-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        .button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background-color: #282828;
+            color: #e0e0e0;
+            text-decoration: none;
+            border-radius: 8px;
+            text-align: center;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .button:hover {
+            background-color: #383838;
+            transform: scale(1.1);
+        }
+        .menu {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 100;
+        }
+        .menu a {
+            background-color: #ff6f61;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            margin-bottom: 0.5rem;
+            text-decoration: none;
+            text-align: center;
+            display: block;
+            transition: background-color 0.3s;
+        }
+        .menu a:hover {
+            background-color: #ff3b2b;
+        }
     </style>
 </head>
 <body>
     <header>
         <h1>👋 HI! I'm JIK</h1>
+        <nav>
+            <a href="#about">About Me</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+        </nav>
     </header>
 
-    <section>
-        <h2>About Me</h2>
-        <p>🎓 <strong>Computer Engineering Student</strong></p>
-        <p>💻 Passionate about <strong>cybersecurity</strong>, <strong>programming</strong>, and <strong>vulnerability analysis</strong></p>
-        <p>🎯 My goal is <strong>continuous learning</strong> and becoming an <strong>expert in cybersecurity</strong></p>
-    </section>
+    <div class="menu">
+        <a href="#pentester">Pentester</a>
+        <a href="#ceh">CEH</a>
+    </div>
 
-    <section>
-        <h2>Connect With Me</h2>
-        <div class="button-container">
-            <a class="button" href="mailto:sudojik@gmail.com">📧 Gmail</a>
-            <a class="button" href="https://www.linkedin.com/in/jik-4876b2341/">🔗 LinkedIn</a>
-            <a class="button" href="https://x.com/cyber_jik?t=3JWCLHPaLMQbSSERkkXmHQ&s=09/">🐦 X</a>
+    <div id="about" class="main-container">
+        <div class="page-content">
+            <h2>About Me</h2>
+            <p>🎓 <strong>Computer Engineering Student</strong></p>
+            <p>💻 Passionate about <strong>cybersecurity</strong>, <strong>programming</strong>, and <strong>vulnerability analysis</strong></p>
+            <p>🎯 My goal is <strong>continuous learning</strong> and becoming an <strong>expert in cybersecurity</strong></p>
         </div>
-    </section>
+    </div>
 
-    <section>
-        <h2>🚀 Skills & Technologies</h2>
-        <div class="skills">
-            <div class="skill">
-                <img src="net+.jpg" alt="Network+">
-                <span>Network+</span>
-            </div>
-            <div class="skill">
-                <img src="owasp.png" alt="OWASP">
-                <span>OWASP</span>
-            </div>
-            <div class="skill">
-                <img src="linux.png" alt="LPIC-1">
-                <span>LPIC-1</span>
-            </div>
-            <div class="skill">
-                <img src="python.png" alt="Python">
-                <span>Python</span>
-            </div>
-            <div class="skill">
-                <img src="js.png" alt="JavaScript">
-                <span>JavaScript</span>
-            </div>
-            <div class="skill">
-                <img src="html.png" alt="HTML">
-                <span>HTML</span>
-            </div>
-            <div class="skill">
-                <img src="css.png" alt="CSS">
-                <span>CSS</span>
-            </div>
-            <div class="skill">
-                <img src="c.png" alt="C">
-                <span>C</span>
+    <div id="pentester" class="main-container">
+        <div class="page-content">
+            <h2>Pentester</h2>
+            <p>🔐 As a Pentester, I focus on identifying vulnerabilities in systems, networks, and applications. I perform penetration testing to evaluate security systems and find potential weaknesses that could be exploited.</p>
+            <p>🚀 My expertise in tools like Kali Linux, Metasploit, Burp Suite, and others, helps me perform comprehensive security assessments.</p>
+        </div>
+    </div>
+
+    <div id="ceh" class="main-container">
+        <div class="page-content">
+            <h2>CEH - Certified Ethical Hacker</h2>
+            <p>🎓 I'm currently preparing for the Certified Ethical Hacker (CEH) certification. This course covers a wide range of ethical hacking techniques, focusing on hands-on skills that can be used to assess and defend against security breaches.</p>
+            <p>💻 I work on real-world scenarios, understanding vulnerabilities and learning methods to exploit and secure systems effectively.</p>
+        </div>
+    </div>
+
+    <div id="skills" class="main-container">
+        <div class="page-content">
+            <h2>🚀 Skills & Technologies</h2>
+            <div class="skills">
+                <div class="skill">
+                    <img src="net+.jpg" alt="Network+">
+                    <span>Network+</span>
+                </div>
+                <div class="skill">
+                    <img src="owasp.png" alt="OWASP">
+                    <span>OWASP</span>
+                </div>
+                <div class="skill">
+                    <img src="linux.png" alt="LPIC-1">
+                    <span>LPIC-1</span>
+                </div>
+                <div class="skill">
+                    <img src="python.png" alt="Python">
+                    <span>Python</span>
+                </div>
+                <div class="skill">
+                    <img src="js.png" alt="JavaScript">
+                    <span>JavaScript</span>
+                </div>
+                <div class="skill">
+                    <img src="html.png" alt="HTML">
+                    <span>HTML</span>
+                </div>
+                <div class="skill">
+                    <img src="css.png" alt="CSS">
+                    <span>CSS</span>
+                </div>
+                <div class="skill">
+                    <img src="c.png" alt="C">
+                    <span>C</span>
+                </div>
             </div>
         </div>
-    </section>
+    </div>
+
+    <footer id="contact" style="background-color: #1f1f1f; padding: 2rem; text-align: center;">
+        <p>📧 Contact me at <a href="mailto:sudojik@gmail.com" style="color: #ff6f61;">sudojik@gmail.com</a></p>
+    </footer>
 </body>
 </html>
