@@ -36,19 +36,26 @@
             color: #ff6f61;
             margin-bottom: 1rem;
         }
-        table {
-            width: 100%;
-            border-collapse: collapse;
+        .button-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
         }
-        table td {
-            padding: 0.8rem;
-        }
-        a {
-            color: #ff6f61;
+        .button {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background-color: #282828;
+            color: #e0e0e0;
             text-decoration: none;
+            border-radius: 8px;
+            text-align: center;
+            transition: background-color 0.3s, transform 0.3s;
         }
-        a:hover {
-            text-decoration: underline;
+        .button:hover {
+            background-color: #383838;
+            transform: scale(1.1);
         }
         .skills {
             display: flex;
@@ -93,31 +100,22 @@
 
     <section>
         <h2>Connect With Me</h2>
-        <table>
-            <tr>
-                <td>📧 Gmail</td>
-                <td><a href="mailto:sudojik@gmail.com">sudojik@gmail.com</a></td>
-            </tr>
-            <tr>
-                <td>🔗 LinkedIn</td>
-                <td><a href="https://www.linkedin.com/in/jik-4876b2341/">LinkedIn</a></td>
-            </tr>
-            <tr>
-                <td>🐦 X</td>
-                <td><a href="https://x.com/cyber_jik?t=3JWCLHPaLMQbSSERkkXmHQ&s=09/">X</a></td>
-            </tr>
-        </table>
+        <div class="button-container">
+            <a class="button" href="mailto:sudojik@gmail.com">📧 Gmail</a>
+            <a class="button" href="https://www.linkedin.com/in/jik-4876b2341/">🔗 LinkedIn</a>
+            <a class="button" href="https://x.com/cyber_jik?t=3JWCLHPaLMQbSSERkkXmHQ&s=09/">🐦 X</a>
+        </div>
     </section>
 
     <section>
         <h2>🚀 Skills & Technologies</h2>
         <div class="skills">
             <div class="skill">
-                <img src="net+.jpg" alt="Network+" width="64" height="64">
+                <img src="net+.jpg" alt="Network+">
                 <span>Network+</span>
             </div>
             <div class="skill">
-                <img src="owasp.png" alt="OWASP" width="64" height="64">
+                <img src="owasp.png" alt="OWASP">
                 <span>OWASP</span>
             </div>
             <div class="skill">
